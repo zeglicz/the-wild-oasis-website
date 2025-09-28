@@ -5,8 +5,6 @@ import Header from './_components/Header';
 import '@/app/_styles/globals.css';
 const josefin = Josefin_Sans({ subsets: ['latin'], display: 'swap' });
 
-console.log(josefin);
-
 export const metadata = {
   title: {
     template: '%s / The Wild Oasis',
