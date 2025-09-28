@@ -14,6 +14,8 @@ export const metadata = {
     'Luxurious cabin hotel located in the heart of the Italian Dolomites, surrounded by beautiful mountains and dark forests',
 };
 
+// If you want you can fetch data here as well but than error.js need to be called global-error.js to catch error from here as well
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
