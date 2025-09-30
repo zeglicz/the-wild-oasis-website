@@ -10,9 +10,14 @@ function Filter() {
   const activeFilter = searchParams.get('capacity') ?? 'all';
 
   function handleFilter(filter) {
-    const params = new URLSearchParams(searchParams);
-    params.set('capacity', filter);
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    const params = new URLSearchParams(searchParams.toString());
+    if (filter === 'all') params.delete('capacity');
+    else params.set('capacity', filter);
+
+    const url = `${pathname}${
+      params.toString() ? `?${params.toString()}` : ''
+    }`;
+    router.replace(url, { scroll: false });
   }
 
   return (
