@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState } from 'react';
@@ -6,7 +7,7 @@ import { updateGuest } from '@/app/_lib/actions';
 function UpdateProfileForm({ guest, children }) {
   const [count, setCount] = useState();
 
-  const { fullName, email, nationality, nationalID, countryFlag } = guest;
+  const { fullName, email, nationalID, countryFlag } = guest;
 
   return (
     <form
