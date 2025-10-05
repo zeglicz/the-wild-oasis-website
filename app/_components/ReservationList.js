@@ -12,7 +12,7 @@ function ReservationList({ bookings }) {
 
   async function handleDelete(bookingId) {
     optimisticDelete(bookingId);
-    await deleteReservation();
+    await deleteReservation(bookingId);
   }
 
   return (
