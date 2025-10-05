@@ -1,9 +1,9 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { auth, signIn, signOut } from './auth';
 import { supabase } from './supabase';
 import { getBookings } from './data-service';
+import { auth, signIn, signOut } from './auth';
 
 export async function updateGuest(formData) {
   const session = await auth();
