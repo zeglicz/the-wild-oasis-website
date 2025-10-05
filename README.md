@@ -1,8 +1,12 @@
 # <span align="center"><samp>The Wild Oasis Website</samp></span>
 
-Customer-facing website for The Wild Oasis boutique hotel. Allows guests to explore the hotel, view cabins, create profiles, and make reservations. Uses the same Supabase database and API as the internal staff application in my repo `the-wild-oasis`, ensuring data consistency between the staff app and the website.
+Customer-facing website for The Wild Oasis boutique hotel. Allows guests to explore the hotel, view cabins, create profiles, and make reservations. Uses the same Supabase database and API as in my other repo `the-wild-oasis` ensuring data consistency between the staff app and the website.
 
 This project is based on [_The Ultimate React Course 2025: React, Next.js, Redux & More_](https://www.udemy.com/course/the-ultimate-react-course/) by Jonas Schmedtmann. Educational repository - not intended for production use.
+
+## Demo
+
+![app view](docs/demo.jpg)
 
 ## Features
 
@@ -19,6 +23,7 @@ This project is based on [_The Ultimate React Course 2025: React, Next.js, Redux
 - **TailwindCSS** – styling
 - **Context API** – global UI state management
 - **Supabase** – database, authentication, storage
+- **NextAuth.js** - guest authentication
 - **React Hook Form** – form handling
 
 ## Pages
@@ -29,6 +34,7 @@ This project is based on [_The Ultimate React Course 2025: React, Next.js, Redux
 - `/cabins/:id` – individual cabin detail and reservation
 - `/login` – guest login/signup
 - `/account/reservations` – guest dashboard for viewing, editing, and deleting reservations
+- `/account/reservations/edit/:id` – edit an existing reservation
 - `/account/profile` – guest profile management
 
 ## Project structure
@@ -37,6 +43,7 @@ This project is based on [_The Ultimate React Course 2025: React, Next.js, Redux
 public/                # Static assets (images, logos)
 app/
 ├─ _components/        # Reusable UI components, opted out of Next.js routing
+├─ _context/           # React context providers for global state management
 ├─ _lib/               # Helper functions, API calls (e.g., Supabase)
 ├─ _styles/            # Global styles, Tailwind CSS configuration
 ├─ api/                # API route handlers
